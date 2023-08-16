@@ -30,7 +30,7 @@ const HomePage = ({ data }) => {
         `}
         to="/blog"
       >
-        View All posts
+        Все записи
       </StyledLink>
     </Layout>
   );
