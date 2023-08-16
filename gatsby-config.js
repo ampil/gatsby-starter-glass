@@ -139,7 +139,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: `Gatsby Glass RSS Feed`,
+            title: `RSS Feed по СБОРКЕ`,
           },
         ],
       },

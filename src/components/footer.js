@@ -10,7 +10,7 @@ const Footer = () => {
         <SocialLinks />
 
         <FooterAttribution>
-          Созадно:{' '}
+          Разработка сайта:{' '}
           <a href="https://t.me/ampil">Андрей Ампилогов</a>
         </FooterAttribution>
       </FooterWrapper>

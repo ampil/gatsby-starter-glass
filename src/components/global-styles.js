@@ -101,8 +101,8 @@ body::-webkit-scrollbar-track {
 }
 
 body {
-  font-family: 'Amatic SC', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
-    helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+  font-family: 'Advent Pro', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
+    helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif, 'Amatic SC';
   transition-property: background-color, color, background;
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
