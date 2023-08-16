@@ -61,9 +61,7 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        profile_image {
-          absolutePath
-        }
+        profile_image
       }
     }
   }
