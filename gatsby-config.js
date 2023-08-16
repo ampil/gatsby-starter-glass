@@ -147,7 +147,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Source Sans Pro`, `Poppins\:400,400i,700`, `Amatic SC`, `Advent Pro`],
+        fonts: [`Source Sans Pro`, `Poppins\:400,400i,700`, `Advent Pro`, `Amatic SC`],
         display: "swap",
       },
     },
