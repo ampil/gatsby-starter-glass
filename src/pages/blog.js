@@ -8,9 +8,9 @@ const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
 
   return (
-    <Layout title="Blog">
+    <Layout title="Все записи">
       <HeaderWrapper>
-        <h1>Blog</h1>
+        <h1>Все записи</h1>
 
         <Link
           css={`
@@ -20,7 +20,7 @@ const Blog = ({ data }) => {
           `}
           to="/tags"
         >
-          view all tags
+          посмотреть все тэги
         </Link>
       </HeaderWrapper>
 

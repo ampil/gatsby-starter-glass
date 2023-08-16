@@ -14,8 +14,8 @@ const Tags = ({ data }) => {
   const tags = data.allMarkdownRemark.group;
 
   return (
-    <Layout title="All Tags">
-      <h1>All Tags</h1>
+    <Layout title="Все тэги">
+      <h1>Все тэги</h1>
 
       <TagList>
         {tags.map((tag) => (

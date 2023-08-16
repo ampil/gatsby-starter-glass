@@ -5,11 +5,11 @@ import styled from 'styled-components';
 
 const NotFoundPage = () => {
   return (
-    <Layout title="404 Not Found">
+    <Layout title="404 такой страницы нет">
       <NotFoundPageWrapper>
         <Ghost size={240} mood="sad" color="#E0E4E8" />
-        <h1>OOPS..</h1>
-        <p>404. Page not found</p>
+        <h1>ой..</h1>
+        <p>Ошибка 404. такой страницы нет</p>
       </NotFoundPageWrapper>
     </Layout>
   );
