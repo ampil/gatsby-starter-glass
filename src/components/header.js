@@ -7,17 +7,17 @@ import { useStaticQuery, graphql } from "gatsby";
 
 const HEADER_NAV_ITEM = [
   {
-    label: "Blog",
+    label: "СБОРКА",
     url: "/blog",
     isExternal: false,
   },
   {
-    label: "About",
+    label: "Команда",
     url: "/about",
     isExternal: false,
   },
   {
-    label: "Contact",
+    label: "Напишите нам",
     url: "/contact",
     isExternal: false,
   },
@@ -130,7 +130,7 @@ const StyledNavListItem = styled.li`
   }
   & a {
     color: inherit;
-    text-transform: uppercase;
+    //text-transform: uppercase;
     font-size: var(--size-300);
     text-decoration: none;
     letter-spacing: 0.1rem;

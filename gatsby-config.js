@@ -1,15 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Glass`,
+    title: `🏠 СБОРКА в Алматы`,
     author: {
-      name: `Yinka Adedire`,
-      summary: `Self-taught front-end web dev. JAMStack.`,
+      name: `Андрей Ампилогов`,
+      summary: `Разработчик, программист, аналитик`,
     },
     openGraphImage: `open-graph-image.png`,
-    description: `A minimal & beautiful gatsby personal blog starter with a nice glassmorphism UI.`,
-    siteUrl: `https://gatsbyglass.netlify.app`,
+    description: `Сборник текстов по мотивам СБОРКИ`,
+    siteUrl: `https://sborka.netlify.app`,
     social: {
-      twitter: `yinkakun`,
+      telegram: `ampil`,
     },
     socialLinks: [
       {
@@ -22,7 +22,7 @@ module.exports = {
       },
       {
         name: "instagram",
-        url: "https://instagram.com",
+        url: "https://instagram.com/cic",
       },
     ],
   },
@@ -147,7 +147,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Source Sans Pro`, `Poppins\:400,400i,700`],
+        fonts: [`Source Sans Pro`, `Poppins\:400,400i,700`, `Amatic SC`, `Advent Pro`],
         display: "swap",
       },
     },

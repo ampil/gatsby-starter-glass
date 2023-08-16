@@ -1,4 +1,4 @@
-# Gatsby Starter Glass
+# Сайт по КИ на основе Gatsby Starter Glass
 
 A Minimal & Beautiful Gatsby Personal Blog Starter With Nice Glassmorphism UI.
 
