@@ -1,8 +1,8 @@
 ---
 template: "index-template"
-title: "Gatsby Starter Glass"
+title: "СБОРКА в Алматы"
 ---
 
-# Hello World
+# СБОРКА в Алматы
 
-A minimal & beautiful gatsby personal blog starter with nice glassmorphism UI.
+Сборник текстов и материалов по мотивам СБОРКИ в Алматы.

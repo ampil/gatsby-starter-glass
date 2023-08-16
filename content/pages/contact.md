@@ -1,8 +1,8 @@
 ---
-title: 'Contact Me'
+title: 'Напишите нам'
 template: 'contact-template'
 ---
 
-# Get in Touch.
+# Есть вопросы?
 
-If you've got an inquiry for a job or project,drop me a line at hello@hello.com or fill the form right here.
+Если у вас есть вопросы или предложения по проведения событий в рамках КИ и перформарманса, пишите тг:андр или в форме справа.
