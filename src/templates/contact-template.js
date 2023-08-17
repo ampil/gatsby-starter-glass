@@ -13,6 +13,7 @@ import styled, { css } from "styled-components";
 const ContactTemplate = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark;
 
+  /*
   return (
     <Layout title={frontmatter.title}>
       <ContactWrapper>
@@ -21,11 +22,12 @@ const ContactTemplate = ({ data }) => {
       </ContactWrapper>
     </Layout>
   );
+  */
 };
 
 export default ContactTemplate;
 
-const ContactForm = () => {
+/* const ContactForm = () => {
   const {
     register,
     handleSubmit,
@@ -115,7 +117,7 @@ const ContactForm = () => {
       </NetlifyFormProvider>
     </FormWrapper>
   );
-};
+}; 
 
 const ContactWrapper = styled.div`
   display: flex;
@@ -169,6 +171,7 @@ const FormWrapper = styled.div`
     border: 1px solid #515151;
   }
 `;
+
 
 const FormGroup = styled.div`
   display: flex;
@@ -236,6 +239,8 @@ const FormButton = styled.button`
   text-transform: uppercase;
   border-radius: 4px;
 `;
+
+*/
 
 export const pageQuery = graphql`
   query($slug: String!) {
