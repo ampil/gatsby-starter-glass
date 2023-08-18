@@ -42,7 +42,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   if (result.errors) {
     reporter.panicOnBuild(
-      `There was an error loading your blog posts`,
+      `Произошла ошибка в загрузке постов`,
       result.errors
     );
     return;

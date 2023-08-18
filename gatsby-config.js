@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `🏠 СБОРКА в Алматы`,
+    title: `🏠 СБОРКА`,
     author: {
       name: `Андрей Ампилогов`,
       summary: `Разработчик, программист, аналитик`,
@@ -12,17 +12,17 @@ module.exports = {
       telegram: `ampil`,
     },
     socialLinks: [
-      {
+      /*{
         name: "github",
         url: "https://github.com",
       },
       {
         name: "twitter",
         url: "https://twitter.com",
-      },
+      },*/
       {
         name: "instagram",
-        url: "https://instagram.com/cic",
+        url: "https://instagram.com/cicfest",
       },
     ],
   },

@@ -9,13 +9,13 @@ const TagsTemplate = ({ pageContext, data }) => {
   const { tag } = pageContext;
   const { totalCount } = data.allMarkdownRemark;
   const posts = data.allMarkdownRemark.nodes;
-  const title = `Posts tagged ${tag}`;
+  const title = `Постов с тэгом ${tag}`;
 
   return (
     <Layout title={title}>
       <TagsTemplateWrapper>
         <Title>
-          {totalCount} posts tagged "{tag}"
+          {totalCount} постов с тэгом "{tag}"
         </Title>
         <Link
           css={`
@@ -26,7 +26,7 @@ const TagsTemplate = ({ pageContext, data }) => {
           `}
           to="/tags"
         >
-          view all tags
+          посмотреть все тэги
         </Link>
         <PostList posts={posts} />
 
@@ -37,7 +37,7 @@ const TagsTemplate = ({ pageContext, data }) => {
           `}
           to="/tags"
         >
-          View All tags
+          Посмотреть все тэги
         </StyledLink>
       </TagsTemplateWrapper>
     </Layout>
