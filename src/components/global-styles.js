@@ -113,7 +113,7 @@ body {
 body.light-mode {
   color: #37292C;
   background-color: white;
-  background-image: linear-gradient(315deg, #ccfbf1 0%, #ffe4e6 50%);
+  background-image: linear-gradient(15deg, #ffeedd 0%, #ffffff 50%);
 }
 
 body.dark-mode {

@@ -82,12 +82,14 @@ const StyledPostListItem = styled.li`
 
   body.light-mode & {
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    //border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid #515151;
+    //background-color: #3b3b3c;
     background-color: rgba(255, 255, 255, 0.3);
   }
 
   body.light-mode &:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 15, 0.5);
   }
 
   body.dark-mode & {
