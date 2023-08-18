@@ -12,6 +12,11 @@ const HEADER_NAV_ITEM = [
     isExternal: false,
   },
   {
+    label: "Тэги",
+    url: "/tags",
+    isExternal: false,
+  },
+  {
     label: "Команда",
     url: "/about",
     isExternal: false,
