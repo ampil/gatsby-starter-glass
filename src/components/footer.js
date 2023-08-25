@@ -11,10 +11,10 @@ const Footer = () => {
 
         <FooterAttribution>
           Разработка сайта:{' '}
-          <a href="https://t.me/ampil" target="_blank">Андрей Ампилогов</a>
+          <a href="https://t.me/ampil" target="_blank" rel="noreferrer">Андрей Ампилогов</a>
           <p></p>
           Иллюстрации:{' '}
-          <a href="https://instagram.com/zubikistan" target="_blank">Татьяна Зубарева</a>
+          <a href="https://instagram.com/zubikistan" target="_blank" rel="noreferrer">Татьяна Зубарева</a>
         </FooterAttribution>
       </FooterWrapper>
     </StyledFooter>
