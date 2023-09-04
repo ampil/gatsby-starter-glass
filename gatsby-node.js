@@ -1,12 +1,20 @@
 const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
-const toKebabCase = (str) => {
-  return str
-    .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
-    .map((x) => x.toLowerCase())
-    .join('-');
-};
+
+const toKebabCase = (str) => str.replace(/[A-Z]+(?![a-z])|[A-Z]/g, ($, ofs) => (ofs ? "-" : "") + $.toLowerCase());
+
+
+// const toKebabCase = (str) => {
+//   return str
+//     .replace(/[A-Z]+(?![a-z])|[A-Z]/g, ($, ofs) => (ofs ? "-" : "") + $.toLowerCase());
+//     //.match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+//     //.match([\d\D]*)
+//     //[\s\S]*
+//     //(?s).*
+//     //.map((x) => x.toLowerCase())
+//     //.join('-');
+// };
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;

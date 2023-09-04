@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import styled from "styled-components";
 import Tags from "../components/tags";
 
+
 const PostTemplate = ({ data }) => {
   const { frontmatter, excerpt, html } = data.markdownRemark;
   const prev = data.prev;
@@ -46,7 +47,16 @@ const PostTemplate = ({ data }) => {
   );
 };
 
-export default PostTemplate;
+export default PostTemplate ;
+// export default function PostTemplate() {
+//   return (
+//     <div>
+//       <Link to="/contact/">Contact</Link>
+//     </div>
+//   )
+// }
+
+
 
 const PostWrapper = styled.div`
   padding-top: var(--size-900);
@@ -163,7 +173,7 @@ const PostPagination = styled.nav`
     color: inherit;
     text-decoration: none;
     font-size: var(--size-400);
-    text-transform: capitalize;
+    //text-transform: capitalize;
   }
 
   & a::after {

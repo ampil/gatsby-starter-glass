@@ -11,11 +11,11 @@ const HEADER_NAV_ITEM = [
     url: "/blog",
     isExternal: false,
   },
-  {
-    label: "Тэги",
-    url: "/tags",
-    isExternal: false,
-  },
+  // {
+  //   label: "Тэги",
+  //   url: "/tags",
+  //   isExternal: false,
+  // },
   {
     label: "Команда",
     url: "/about",
