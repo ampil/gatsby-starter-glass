@@ -10,7 +10,7 @@ template: about-template
 
 + Саша Андрияшкин: email
 
-+ Аня Богословская: instagram
++ Аня Богословская: <a href=https://instagram.com/cicfest>INSTAGRAM</a>
 
 + Андрей Ампилогов: telegram
 

@@ -49,7 +49,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #111b27;
+	background: #4d79af;
 }
 
 /* Inline code */
@@ -214,7 +214,7 @@ pre[class*="language-"] {
  */
 div.code-toolbar > .toolbar a,
 div.code-toolbar > .toolbar button {
-	color: #111b27;
+	color: #4d79af;
 	background: #6cb8e6;
 }
 
@@ -222,7 +222,7 @@ div.code-toolbar > .toolbar a:hover,
 div.code-toolbar > .toolbar a:focus,
 div.code-toolbar > .toolbar button:hover,
 div.code-toolbar > .toolbar button:focus {
-	color: #111b27;
+	color: #4d79af;
 	background: #6cb8e6da;
 	text-decoration: none;
 }
@@ -230,7 +230,7 @@ div.code-toolbar > .toolbar button:focus {
 div.code-toolbar > .toolbar span,
 div.code-toolbar > .toolbar span:hover,
 div.code-toolbar > .toolbar span:focus {
-	color: #111b27;
+	color: #4d79af;
 	background: #8da1b9;
 }
 
@@ -245,7 +245,7 @@ div.code-toolbar > .toolbar span:focus {
 .line-highlight:before,
 .line-highlight[data-end]:after {
 	background-color: #8da1b9;
-	color: #111b27;
+	color: #4d79af;
 	box-shadow: 0 1px #3c526d;
 }
 

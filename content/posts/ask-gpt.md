@@ -49,40 +49,5 @@ description: "Во время подкаста ‘КИдай’ (https://kidai.m
 > Телесные практики и политика тесно переплетаются, и связь между ними может быть очень комплексной и многогранной. Они могут служить инструментом для выражения политических убеждений, протеста, самосознания и мобилизации, а также влиять на политические процессы и социальные изменения.
 > В целом, определение контактной импровизации помогает установить общие основы и концепции этой танцевальной практики, но важно помнить, что контактная импровизация может быть интерпретирована и исполнена по-разному в зависимости от участников и контекста.
 
+&nbsp;  
 ```Chat GPT```
-
-<span style="background-color:rgba(0, 0, 0, 0.0470588); vertical-align: middle; padding:12px 10px 6px 12px; border-radius: 10px;"><font size="+2" face = "Source Sans Pro">Chat GPT</font></span>
-
-
-<div style="background-color:rgba(0, 0, 0, 0.0470588); text-align:center; vertical-align: middle; padding:20px 0;">
-<font face = "Source Sans Pro">
-Chat GPT
-</font>
-</div>
-
-<div style="background-color:rgba(0, 0, 0, 0.0470588); text-align:center; vertical-align: middle; padding:10px 0; margin-top:30px">
-<font face = "Source Sans Pro">
-Chat GPT
-</font>
-</div>
-
-
-```Автор: Chat GPT```
-
-<span style="background-color:rgba(0, 0, 0, 0.0470588); vertical-align: middle; padding:12px 10px 6px 12px; border-radius: 10px;"><font size="+2" face = "Source Sans Pro">Автор: Chat GPT</font></span>
-
-
-<div style="background-color:rgba(0, 0, 0, 0.0470588); text-align:center; vertical-align: middle; padding:20px 0;">
-<font face = "Source Sans Pro">
-Автор: Chat GPT
-</font>
-</div>
-
-<div style="background-color:rgba(0, 0, 0, 0.0470588); text-align:center; vertical-align: middle; padding:10px 0; margin-top:30px">
-<font face = "Source Sans Pro">
-Автор: Chat GPT
-</font>
-</div>
-
-
-<id = "author"> Chat GPT </id>

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `🏠 СБОРКА`,
+    title: `СБОРКА`,
     author: {
       name: `Андрей Ампилогов`,
       summary: `Разработчик, программист, аналитик`,
@@ -87,7 +87,7 @@ module.exports = {
         modulePath: `${__dirname}/src/netlify-cms/index.js`,
         enableIdentityWidget: true,
         publicPath: "admin",
-        htmlTitle: "Content Manager",
+        htmlTitle: "Админка",
         includeRobots: false,
       },
     },
@@ -139,7 +139,7 @@ module.exports = {
               }
             `,
             output: "/rss.xml",
-            title: `RSS Feed по СБОРКЕ`,
+            title: `RSS по СБОРКЕ`,
           },
         ],
       },
