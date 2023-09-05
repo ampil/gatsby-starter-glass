@@ -1,112 +1,92 @@
-# Сайт по КИ на основе Gatsby Starter Glass
+# Сайт с артефактами по СБОРКЕ - событию в области Контактной Импровизации (КИ)
 
-A Minimal & Beautiful Gatsby Personal Blog Starter With Nice Glassmorphism UI.
+Сайт сделан в виде серии блог-постов с форматированием, картинками, перекрестными ссылками.
 
-[View Live Demo](https://gatsbyglass.netlify.app)
+[Демо](https://sborka.netlify.app)
 
 ![demo site screenshot](./screenshot.png)
 
-## Features
+## Особенности
 
-* Fully responsive
-* SEO metadata and Open Graph tags
-* Maximized lighthouse score
-* Contact form with Netlify Form
-* Edit Content with Netlify CMS
-* Easy to deploy
-* Syntax highlighting via PrismJS
+* Авторские материалы
+* Авторское оформление
+* Работает на десктопе и мобильных приложениях
+* Метаданные для SEO 
+* Тэги по авторам
+* Высокый показатель lighthouse
+* Админка на Netlify CMS
+* Легко задеплоить
+* Управление через <https://app.netlify.com>
 
-## Local Install
+## Установка
 
 ```bash
-# 1. Clone the repository
-git clone https://github.com/yinkakun/gatsby-starter-glass
+# 0. Установка необходимых фрейморков
+npm install
 
-# 2. Navigate into repository
-cd gatsby-starter-glass
+# 1. Скопировать репозитарий к себе локально
+git clone https://github.com/ampil/sborka/
 
-# 3. Install the dependencies
+# 2. Перейти в каталог с репозитарием
+cd sborka
+
+# 3. Установка зависимостей для фрейморков
 yarn install
 
-# 4. Start the development server
+# 4. Создать сборку / проверить билд
+yarn  build
+
+# 4. Запустить локальный сервер
 yarn start
 
-# 5. Start the build mode
-yarn  build
+
 ```
 
-## Configuration
 
-Within gatsby-config.js, you can specify information about your site (metadata) like the site title and description to properly generate meta tags.
+## Создание контента
 
-```js
-// gatsby-config.js
+### Посты в блоге
 
-module.exports = {
-  siteMetadata: {
-    title: `Gatsby Starter Glass`,
-    author: {
-      name: `Yinka Adedire`,
-      summary: `self-taught front-end dev. jamstack enthusaist.`,
-    },
-    description: `A Minimal & Beautiful Gatsby Personal Blog Starter With Nice Glassmorphism Ui.`,
-    siteUrl: `https://gatsbyglass.netlify.app`,
-    social: {
-      twitter: `yinkakun`,
-    },
-  },
-
-  // ...
-};
-```
-
-## Deployment
-
-Netlify is a great way to easily deploy sites plus this starter uses Netlify Form for the Contact form.
-
-- Generate a new repo from this repo which will copy all files from this repo to your newly created repo.
-
-- Go to <https://app.netlify.com>. Once you’ve logged in, click the 'New site from Git' button on your dashboard and choose your newly created repo.
-
-- Follow the prompts, it will build and deploy the new site on Netlify, bringing you to the site dashboard when the build is complete.
-
-## Manually Editing contents
-
-### Blog Posts
-
-Blog contents can be updated in markdown format at `content/blog`. Delete placeholder posts and start blogging.
+Страницы с постами находятся по пути `content/blog`. Есть заголовок, дата, описание, тэги (опционально). Редактируются через Markdown.
 
 ```md
 ---
-title: Hello World
-date: '2021-05-01'
-description: 'Hello World'
+title: Интро
+date: '2023-09-01'
+description: 'Этот текст будет показан в карточке блога'
 ---
 
-This top portion is the beginning of the post and will show up as the excerpt on the homepage.
+Здесь можно ввести любой текст и отформатировать его средствами Markdown.
 ```
 
-### Pages
+### Страницы
 
-Homepage intro, Contact, and About page content can be updated in Markdown format at `content/pages`.
+Домашняя страница, контакты, о команде расположены по пути `content/pages`. Редактируются через Markdown.
 
-# Editing Contents with Netlify CMS
+### Через админку Netlify CMS
 
-This project is preconfigured to work with Netlify CMS.
-When Netlify CMS makes commits to your repo, Netlify will auto-trigger a rebuild / deploy when new commits are made.
-You’ll need to set up Netlify’s Identity service to authorize users to log in to the CMS.
+По адресу <localhost:8000/admin> через веб-интерфейс можно создать посты или страницы для сайта.
+Чтобы получить доступ в админку, смотрите пункт ниже.
 
-- Go to <https://app.netlify.com> > select your website from the list.
-- Go to Identity and click Enable Identity.
-- Click on Invite Users and invite yourself. You will receive an email and you need to accept the invitation to set the password.
-- Now headover to Settings > Identity > Services and Enable Git Gateway.
-- You can also manage who can register and log in to your CMS. Go to Settings > Identity > Registration  Registration Preferences. I would prefer to keep it to Invite Only if I am the only one using it.
-- Now, go to to site-name.netlify.app/admin/, and login with your credentials.
 
-Once you are in your Netlify CMS, you can navigate to Posts and Pages. Here you will find a list of existing pages and posts.
+# Обновление
+Локальные изменения могут легко быть перенесены в интернет-версию сайта.
+Для этого нужно соединить проект с Netlify CMS через Github.
+Когда появляются новые коммиты на Github, Netlify самостоятельно заберёт их и пересоздаст сборку сайта, которую затем выпустит в веб.
 
-## Built with
+Для этого - авторизуйтесь через Netlify Identity:
 
-- Gatsby for Static Site Generation
-- Netlify CMS for content management
-- Styled Component for styling
+- Залогиньтесь в <https://app.netlify.com>, выберите свой сайт.
+- В пункте Identity кликнуть на Enable Identity.
+- Для админки, кликните на Invite Users и введите свой емейл.
+- Теперь в Settings > Identity > Services нажать Enable Git Gateway.
+- Если сайт нишевый - лучше ограничить регистрацию. Для этого зайдите в Settings > Identity > Registration > Registration Preferences. Выставить там Invite Only (в бесплатной версии до 3 аккаунтов).
+- Теперь можно зайти на ваш веб-сайт <sborka.netlify.app/admin/>, и залогниться.
+
+Теперь можно создавать посты и страницы через админку Netlify CMS. 
+
+## Технологии
+
+- движок Gatsby для быстрой генерации страниц
+- Netlify CMS для управления контентом
+- основано на https://gatsbyglass.netlify.app
