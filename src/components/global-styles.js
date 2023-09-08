@@ -146,6 +146,7 @@ h3 {
 
 h1 {
   font-size: var(--size-800);
+  font-weight: 900;
   font-family: 'Montserrat';
 }
 

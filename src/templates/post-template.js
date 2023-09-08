@@ -132,9 +132,10 @@ const PostContent = styled.section`
   }
 
   a {
-    color: inherit;
+    //color: inherit;  a2dffb
+    color: #962020;
     text-decoration: underline;
-    text-decoration-thickness: 0.125rem;
+    //text-decoration-thickness: 0.125rem;
   }
 
   blockquote {

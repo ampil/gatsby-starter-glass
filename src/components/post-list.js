@@ -114,7 +114,7 @@ const PostListTitle = styled.h2`
   margin-bottom: 1rem;
   //text-transform: capitalize;
   font-size: var(--size-600);
-  font-weight: 700;
+  font-weight: 800;
 
   & a {
     text-decoration: none;

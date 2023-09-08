@@ -19,7 +19,19 @@ const HomePage = ({ data }) => {
       />
 
       <PostList posts={posts} />
-
+      <StyledLink
+        css={`
+          display: block;
+          margin-top: var(--size-800);
+          margin-bottom: var(--size-800);
+          margin-left: auto;
+          margin-right: auto;
+          width: fit-content;
+        `}
+        to="/blog"
+      >
+        Все записи
+      </StyledLink>
     </Layout>
   );
 };
@@ -59,7 +71,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       filter: { fields: { contentType: { eq: "posts" } } }
       sort: { order: DESC, fields: frontmatter___date }
-      limit: 49
+      limit: 9
     ) {
       nodes {
         fields {
