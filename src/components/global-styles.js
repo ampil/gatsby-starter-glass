@@ -101,7 +101,7 @@ body::-webkit-scrollbar-track {
 }
 
 body {
-  font-family: 'Advent Pro', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
+  font-family: 'Lora', -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue,
     helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif, 'Amatic SC';
   transition-property: background-color, color, background;
   transition-duration: 0.3s;
@@ -113,7 +113,7 @@ body {
 body.light-mode {
   color: #37292C;
   background-color: white;
-  background-image: linear-gradient(15deg, #ffeedd 0%, #ffffff 50%);
+  //background-image: linear-gradient(15deg, #ffeedd 0%, #ffffff 50%);
 }
 
 body.dark-mode {
@@ -146,14 +146,17 @@ h3 {
 
 h1 {
   font-size: var(--size-800);
+  font-family: 'Montserrat';
 }
 
 h2 {
   font-size: var(--size-700);
+  font-family: 'Montserrat';
 }
 
 h3 {
   font-size: var(--size-600);
+  font-family: 'Montserrat';
 }
 
 p {

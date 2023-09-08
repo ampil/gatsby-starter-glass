@@ -6,11 +6,11 @@ template: about-template
 # Команда
 <br>
 
-Создатели артефтактов СБОРКИ:
+Команда СБОРКА.послесловие:
 
 + Саша Андрияшкин: email
 
-+ Анна Богословская: <a href=https://instagram.com/cicfest>INSTAGRAM</a>
++ Анна Богословская: <a href=https://instagram.com/cicfest>Instagram</a>
 
-+ Андрей Ампилогов: telegram
++ Андрей Ампилогов: <a href=https://t.me/ampil>Telegram</a>
 

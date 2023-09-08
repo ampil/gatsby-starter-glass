@@ -4,15 +4,19 @@ import { Link } from "gatsby";
 import Container from "./container";
 import ThemeSwitch from "./theme-switch";
 import { useStaticQuery, graphql } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import zuHomeImg from "../images/zu-home.png";
+
+//const image = getImage(site.zuhome);
 
 const HEADER_NAV_ITEM = [
   {
-    label: "Записи",
+    label: "Список записей",
     url: "/blog",
     isExternal: false,
   },
   // {
-  //   label: "Тэги",
+  //   label: "Авторы",
   //   url: "/tags",
   //   isExternal: false,
   // },
@@ -45,7 +49,7 @@ const Header = () => {
     <StyledHeader>
       <HeaderWrapper>
         <HeaderTitle>
-          <Link to="/">🏠 {site.siteMetadata.title}</Link>
+          <Link to="/"> <img src={zuHomeImg} alt={site.siteMetadata.title} width={50} /></Link>
         </HeaderTitle>
 
         <HeaderNavList>
@@ -105,6 +109,7 @@ const HeaderTitle = styled.div`
     text-decoration: none;
     font-size: var(--size-400);
     color: inherit;
+    font-family: 'Montserrat';
   }
 `;
 
@@ -113,6 +118,7 @@ const StyledNav = styled.nav`
   padding: 0;
   background: transparent;
   backdrop-filter: unset;
+  font-family: 'Advent Pro';
 `;
 
 const StyledNavList = styled.ul`

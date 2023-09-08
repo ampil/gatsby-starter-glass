@@ -5,7 +5,7 @@ import Tags from "./tags";
 
 const PostList = ({ posts }) => {
   const PostList = posts.map(({ frontmatter, fields, excerpt, timeToRead }) => {
-    const { title, tags, date, description } = frontmatter;
+    const { title, tags, date, description, name } = frontmatter;
     const { slug } = fields;
 
     return (
@@ -13,8 +13,9 @@ const PostList = ({ posts }) => {
         key={slug}
         tags={tags}
         title={title}
-        date={date}
+        //date={date}
         slug={slug}
+        name={name}
         timeToRead={timeToRead}
         description={description}
         excerpt={excerpt}
@@ -33,6 +34,7 @@ const PostListItem = ({
   timeToRead,
   tags,
   excerpt,
+  name,
   description,
   slug,
 }) => {
@@ -51,7 +53,9 @@ const PostListItem = ({
       <PostListMeta>
         <span>{date}</span>
 
-        <span>{timeToRead} mins</span>
+        <span>{name}</span>
+        
+        <span>{timeToRead} мин.</span>
       </PostListMeta>
     </StyledPostListItem>
   );
@@ -89,7 +93,7 @@ const StyledPostListItem = styled.li`
   }
 
   body.light-mode &:hover {
-    background-color: rgba(255, 255, 15, 0.5);
+    //background-color: rgba(255, 255, 15, 0.5);
   }
 
   body.dark-mode & {

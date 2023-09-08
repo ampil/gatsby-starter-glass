@@ -3,12 +3,14 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/layout";
 import styled from "styled-components";
 import Tags from "../components/tags";
-
+import zuHomeImg from "../images/zu-home.png";
 
 const PostTemplate = ({ data }) => {
   const { frontmatter, excerpt, html } = data.markdownRemark;
   const prev = data.prev;
+  const main = data.main;
   const next = data.next;
+  
 
   return (
     <Layout
@@ -21,7 +23,8 @@ const PostTemplate = ({ data }) => {
       <PostWrapper>
         <article>
           <PostTitle>{frontmatter.title}</PostTitle>
-          <PostDate>{frontmatter.date}</PostDate>
+
+          <PostName>{frontmatter.name}</PostName>
 
           <PostContent dangerouslySetInnerHTML={{ __html: html }} />
         </article>
@@ -29,14 +32,21 @@ const PostTemplate = ({ data }) => {
         <PostPagination>
           {prev && (
             <div>
-              <span>previous</span>
+              <span>Назад</span>
               <Link to={prev.fields.slug}> {prev.frontmatter.title}</Link>
             </div>
           )}
 
+          {main && (
+            <div>
+              <Link to="/"> <img src={zuHomeImg} alt="Домой" width={80}/></Link>
+            </div>
+          )}
+
+
           {next && (
             <div>
-              <span>next</span>
+              <span>Далее</span>
               <Link to={next.fields.slug}> {next.frontmatter.title}</Link>
             </div>
           )}
@@ -65,13 +75,22 @@ const PostWrapper = styled.div`
   margin-right: auto;
   max-width: 70ch;
   word-wrap: break-word;
+  font-family: "Lora";
 `;
 
 const PostTitle = styled.h1`
   font-size: var(--size-700);
+  font-family: "Montserrat";
 `;
 
 const PostDate = styled.span`
+  font-size: var(--size-400);
+  display: block;
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+`;
+
+const PostName = styled.span`
   font-size: var(--size-400);
   display: block;
   margin-top: 0.5rem;
@@ -190,16 +209,26 @@ export const pageQuery = graphql`
   query PostBySlug($slug: String!, $prevSlug: String, $nextSlug: String) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
       excerpt(pruneLength: 160)
-      html
+      html 
       frontmatter {
         title
         tags
+        name
         date(formatString: "DD MMMM YYYY", locale: "ru")
         description
       }
     }
 
     prev: markdownRemark(fields: { slug: { eq: $prevSlug } }) {
+      frontmatter {
+        title
+      }
+      fields {
+        slug
+      }
+    }
+
+    main: markdownRemark(fields: { slug: { eq: $prevSlug } }) {
       frontmatter {
         title
       }
