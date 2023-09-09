@@ -2,17 +2,18 @@ import React from 'react';
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/layout';
 import PostList from '../components/post-list';
+import PostLink from '../components/post-link';
 import styled from 'styled-components';
 
 const Blog = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes;
 
   return (
-    <Layout title="Все записи">
+    <Layout title="Список записей">
       <HeaderWrapper>
-        <h1>Все записи</h1>
+        <h1>Список записей</h1>
 
-        <Link
+        {/* <Link
           css={`
             margin-top: var(--size-400);
             color: inherit;
@@ -21,10 +22,10 @@ const Blog = ({ data }) => {
           to="/tags"
         >
           посмотреть все тэги
-        </Link>
+        </Link> */}
       </HeaderWrapper>
 
-      <PostList posts={posts} />
+      <PostLink posts={posts} />
     </Layout>
   );
 };

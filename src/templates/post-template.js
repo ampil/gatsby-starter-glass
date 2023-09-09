@@ -39,7 +39,7 @@ const PostTemplate = ({ data }) => {
 
           {main && (
             <div>
-              <Link to="/"> <img src={zuHomeImg} alt="Домой" width={80}/></Link>
+              <Link to="/"> <img class="displayed" src={zuHomeImg} alt="Домой" width={80}/></Link>
             </div>
           )}
 

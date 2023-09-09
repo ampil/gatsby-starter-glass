@@ -2,7 +2,7 @@ const path = require(`path`);
 const { createFilePath } = require(`gatsby-source-filesystem`);
 
 
-const toKebabCase = (str) => str.replace(/[A-Z]+(?![a-z])|[A-Z]/g, ($, ofs) => (ofs ? "-" : "") + $.toLowerCase());
+// const toKebabCase = (str) => str.replace(/[A-Z]+(?![a-z])|[A-Z]/g, ($, ofs) => (ofs ? "-" : "") + $.toLowerCase());
 
 
 // const toKebabCase = (str) => {
@@ -15,6 +15,32 @@ const toKebabCase = (str) => str.replace(/[A-Z]+(?![a-z])|[A-Z]/g, ($, ofs) => (
 //     //.map((x) => x.toLowerCase())
 //     //.join('-');
 // };
+
+
+const letters = {"Ё":"YO","Й":"I","Ц":"TS","У":"U","К":"K","Е":"E","Н":"N","Г":"G","Ш":"SH","Щ":"SCH","З":"Z","Х":"H","Ъ":"'","ё":"yo","й":"i","ц":"ts","у":"u","к":"k","е":"e","н":"n","г":"g","ш":"sh","щ":"sch","з":"z","х":"h","ъ":"'","Ф":"F","Ы":"I","В":"V","А":"a","П":"P","Р":"R","О":"O","Л":"L","Д":"D","Ж":"ZH","Э":"E","ф":"f","ы":"i","в":"v","а":"a","п":"p","р":"r","о":"o","л":"l","д":"d","ж":"zh","э":"e","Я":"Ya","Ч":"CH","С":"S","М":"M","И":"I","Т":"T","Ь":"'","Б":"B","Ю":"YU","я":"ya","ч":"ch","с":"s","м":"m","и":"i","т":"t","ь":"'","б":"b","ю":"yu"};
+const reverseLetters = {"YO":"Ё","I":"Й","TS":"Ц","U":"У","K":"К","E":"Е","N":"Н","G":"Г","SH":"Ш","SCH":"Щ","Z":"З","H":"Х","'":"Ъ","yo":"ё","i":"й","ts":"ц","u":"у","k":"к","e":"е","n":"н","g":"г","sh":"ш","sch":"щ","z":"з","h":"х","'":"ъ","F":"Ф","I":"Ы","V":"В","a":"А","P":"П","R":"Р","O":"О","L":"Л","D":"Д","ZH":"Ж","E":"Э","f":"ф","i":"ы","v":"в","a":"а","p":"п","r":"р","o":"о","l":"л","d":"д","zh":"ж","e":"э","Ya":"Я","CH":"Ч","S":"С","M":"М","I":"И","T":"Т","'":"Ь","B":"Б","YU":"Ю","ya":"я","ch":"ч","s":"с","m":"м","i":"и","t":"т","'":"ь","b":"б","yu":"ю"};
+
+function transliterate(slug) {
+  return slug
+    .split("")
+    .map((char) => letters[char] || char)
+    .join("");
+}
+
+function reverseTransliterate(slug) {
+  return slug
+    .split("")
+    .map((char) => reverseLetters[char] || char)
+    .join("");
+}
+
+
+const toKebabCase = (str) => {
+  return transliterate(str)
+    .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)
+    .map((x) => x.toLowerCase())
+    .join("-");
+};
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions;
