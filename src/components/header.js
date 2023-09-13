@@ -25,11 +25,11 @@ const HEADER_NAV_ITEM = [
     url: "/about",
     isExternal: false,
   },
-  {
-    label: "Напишите нам",
-    url: "/contact",
-    isExternal: false,
-  },
+  // {
+  //   label: "Напишите нам",
+  //   url: "/contact",
+  //   isExternal: false,
+  // },
 ];
 
 const Header = () => {

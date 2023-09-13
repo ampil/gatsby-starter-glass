@@ -21,8 +21,8 @@ module.exports = {
         url: "https://twitter.com",
       },*/
       {
-        name: "instagram",
-        url: "https://instagram.com/cicfest",
+        name: "Вступайте в Республику",
+        url: "http://ci-republic.tilda.ws/",
       },
     ],
   },

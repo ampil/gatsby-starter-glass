@@ -29,17 +29,21 @@ export default HomePage;
 const Intro = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 60ch;
+  max-width: 90ch;
   align-items: center;
   margin-right: auto;
   margin-left: auto;
   margin-top: var(--size-800);
   margin-bottom: var(--size-900);
-  text-align: center;
+  text-align: left;
 
   & p {
     // text-transform: capitalize;
     font-size: var(--size-400);
+  }
+
+  & div {
+    margin-top: 2rem;
   }
 
   @media screen and (max-width: 700px) {
@@ -48,6 +52,14 @@ const Intro = styled.div`
       font-size: 8vw;
     }
   }
+
+  @media screen and (max-width: 360px) {
+    & h1 {
+      // font-size: var(--size-600);
+      font-size: 7vw;
+    }
+  }
+
 `;
 
 export const pageQuery = graphql`

@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 import styled from "styled-components";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
+
 const AboutTemplate = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark;
   const profileImage = getImage(frontmatter.profile_image);
