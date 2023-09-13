@@ -44,7 +44,8 @@ const Intro = styled.div`
 
   @media screen and (max-width: 700px) {
     & h1 {
-      font-size: var(--size-700);
+      // font-size: var(--size-600);
+      font-size: 8vw;
     }
   }
 `;
