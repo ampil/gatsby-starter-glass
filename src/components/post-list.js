@@ -16,7 +16,7 @@ const PostList = ({ posts }) => {
         //date={date}
         slug={slug}
         name={name}
-        timeToRead={timeToRead}
+        //timeToRead={timeToRead}
         description={description}
         excerpt={excerpt}
       />
@@ -55,7 +55,7 @@ const PostListItem = ({
 
         <span>{name}</span>
         
-        <span>{timeToRead} мин.</span>
+        {/* <span>{timeToRead} мин.</span> */}
       </PostListMeta>
     </StyledPostListItem>
   );
@@ -129,11 +129,23 @@ const PostListTitle = styled.h2`
     left: 0;
     right: 0;
   }
+
+  @media screen and (max-width: 500px) {
+    & {
+      font-size:6vw;
+    }
+  }
 `;
 
 const PostListExcerpt = styled.p`
   margin-top: auto;
   font-size: var(--size-400);
+
+  & a {
+    text-decoration: none;
+    // color: inherit;
+    color: #962020;
+  }
 `;
 
 const PostListMeta = styled.div`

@@ -1,16 +1,3 @@
-// import React from "react"
-// import { Link } from "gatsby"
-
-// const PostLink = ({ posts }) => (
-//   <div>
-//     <Link to={posts.frontmatter.slug}>
-//       {posts.frontmatter.title} ({posts.frontmatter.date})
-//     </Link>
-//   </div>
-// )
-
-// export default PostLink
-
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
@@ -26,7 +13,7 @@ const PostLink = ({ posts }) => {
         title={title}
         slug={slug}
         name={name}
-        timeToRead={timeToRead}
+        // timeToRead={timeToRead}
         description={description}
         excerpt={excerpt}
       />
@@ -66,6 +53,7 @@ const PostLinkItem = ({
 
 const StyledPostLink = styled.ul`
   padding: 20;
+  padding-left: 0;
   list-style: none;
   display: block;
   justify-items: center;
@@ -122,7 +110,8 @@ const PostLinkTitle = styled.h2`
 
   & a {
     text-decoration: none;
-    color: inherit;
+    // color: inherit;
+    color: #962020;
   }
 
   & a::after {
@@ -138,6 +127,12 @@ const PostLinkTitle = styled.h2`
 const PostLinkExcerpt = styled.p`
   margin-top: auto;
   font-size: var(--size-400);
+
+  & a {
+    text-decoration: none;
+    // color: inherit;
+    color: #962020;
+  }
 `;
 
 const PostLinkMeta = styled.div`

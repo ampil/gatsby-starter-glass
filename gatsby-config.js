@@ -6,7 +6,7 @@ module.exports = {
       summary: `Разработчик, программист, аналитик`,
     },
     openGraphImage: `open-graph-image.png`,
-    description: `Сборник текстов по мотивам СБОРКИ`,
+    description: `Сборник текстов и материалов по мотивам СБОРКА.практикум (Алматы, 2023)`,
     siteUrl: `https://sborka.netlify.app`,
     social: {
       telegram: `ampil`,
@@ -67,6 +67,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 630,
+              // maxHeight: 300,
             },
           },
           {
