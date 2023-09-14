@@ -17,7 +17,7 @@ div.about-body {
     background-color: inherit;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     font-size: 16px;
     font-family: "Montserrat", sans-serif;
 }
@@ -32,7 +32,7 @@ div.about-row {
   gap: 20px;
 }
 div.card {
-  width: 240px;
+  max-width: 240px;
   background: #fff;
   padding: 5px;
   border-radius: var(--br);
@@ -65,9 +65,6 @@ div.card h4 {
     text-align: center;
 }
   
-div.card h3 {
-  /* margin: 15px 0 5px; */
-}
 div.card p.role {
   font-size: 80%;
   color: inherit;
@@ -86,22 +83,40 @@ div.card a {
   margin-top: 15px;
 }
 
-@media (max-width: 767px) {
-    .about.row {
+
+@media screen and (max-width: 700px) {
+    div.about.row {
         flex-wrap: wrap;
         justify-content: center;
         padding: 10px;
     }
 
-    .card {
+    div.about.h2 {
+      font-size:7vw;
+    }
+
+    div.card {
         flex: 0 0 calc(50% - 20px);
         max-width: calc(50% - 20px);
     }
+
+
 }
 
-@media (max-width: 420px) {
-    .card {
-        flex: 0 0 calc(100% - 20px);
+@media screen and (max-width: 360px) {
+  div.about.row {
+    display: block;
+}
+
+div.about.h2 {
+  font-size:7vw;
+}
+
+div.card {
+        /* flex: 0 0 calc(100% - 20px); */
         max-width: calc(100% - 20px);
     }
+
+
 }
+
