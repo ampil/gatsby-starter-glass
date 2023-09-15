@@ -72,8 +72,25 @@ const PostWrapper = styled.div`
 `;
 
 const PostTitle = styled.h1`
-  font-size: 8vw;
   font-family: "Montserrat";
+
+  @media screen and (min-width: 701px) {
+    & h1 {
+      font-size: var(--size-700);
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    & h1 {
+      font-size: 6vw;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    & h1 {
+      font-size: 5vw;
+    }
+  }
 `;
 
 const PostDate = styled.span`
@@ -91,14 +108,14 @@ const PostName = styled.span`
 `;
 
 const PostContent = styled.section`
-  padding-top: var(--size-800);
+  padding-top: var(--size-600);
   
   & > * + * {
     margin-top: var(--size-300);
   }
 
   & > p + p {
-    margin-top: var(--size-700);
+    margin-top: var(--size-600);
   }
 
   * + h1,
@@ -107,17 +124,17 @@ const PostContent = styled.section`
     margin-top: var(--size-900);
   }
 
-  h1 {
-    font-size: var(--size-700);
-  }
+  // h1 {
+  //   font-size: var(--size-700);
+  // }
 
-  h2 {
-    font-size: var(--size-600);
-  }
+  // h2 {
+  //   font-size: var(--size-600);
+  // }
 
-  h3 {
-    font-size: var(--size-500);
-  }
+  // h3 {
+  //   font-size: var(--size-500);
+  // }
 
   b,
   strong {
