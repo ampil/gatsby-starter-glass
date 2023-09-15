@@ -183,17 +183,17 @@ h3 {
 @media screen and (max-width: 360px) {
   & h1 {
     // font-size: var(--size-600);
-    font-size: 8vw;
+    font-size: 7vw;
     font-family: 'Montserrat';
   }
 
   & h2 {
-    font-size: 7vw;
+    font-size: 6vw;
     font-family: 'Montserrat';
   }
   
   & h3 {
-    font-size: 6vw;
+    font-size: 5vw;
     font-family: 'Montserrat';
   }
 }
