@@ -10,6 +10,7 @@ const Footer = () => {
         <SocialLinks />
 
         <FooterAttribution>
+          © 2023
           {/* Разработка сайта:{' '}
           <a href="https://t.me/ampil" target="_blank" rel="noreferrer">Андрей Ампилогов</a>
           <p></p>
