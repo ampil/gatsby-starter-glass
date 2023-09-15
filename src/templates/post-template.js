@@ -156,6 +156,21 @@ const PostContent = styled.section`
     white-space: pre-wrap;
     max-width: 100%;
   }
+
+  @media screen and (max-width: 700px) {
+    & h1 {
+      // font-size: var(--size-600);
+      font-size: 8vw;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    & h1 {
+      // font-size: var(--size-600);
+      font-size: 7vw;
+    }
+  }
+  
 `;
 
 const PostPagination = styled.nav`

@@ -45,6 +45,23 @@ const AboutWrapper = styled.div`
       text-align: center;
     }
   }
+
+  @media screen and (max-width: 700px) {
+    & h2 {
+      // font-size: var(--size-600);
+      font-size: 8vw;
+    }
+  }
+
+  @media screen and (max-width: 360px) {
+    & h2 {
+      // font-size: var(--size-600);
+      font-size: 7vw;
+    }
+  }
+
+
+
 `;
 
 const AboutImageWrapper = styled(GatsbyImage)`
