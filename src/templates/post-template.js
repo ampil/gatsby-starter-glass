@@ -59,14 +59,6 @@ const PostTemplate = ({ data }) => {
 };
 
 export default PostTemplate ;
-// export default function PostTemplate() {
-//   return (
-//     <div>
-//       <Link to="/contact/">Contact</Link>
-//     </div>
-//   )
-// }
-
 
 
 const PostWrapper = styled.div`
@@ -80,7 +72,7 @@ const PostWrapper = styled.div`
 `;
 
 const PostTitle = styled.h1`
-  font-size: var(--size-700);
+  font-size: 8vw;
   font-family: "Montserrat";
 `;
 
@@ -100,7 +92,7 @@ const PostName = styled.span`
 
 const PostContent = styled.section`
   padding-top: var(--size-800);
-
+  
   & > * + * {
     margin-top: var(--size-300);
   }
@@ -160,14 +152,14 @@ const PostContent = styled.section`
   @media screen and (max-width: 700px) {
     & h1 {
       // font-size: var(--size-600);
-      font-size: 8vw;
+      font-size: 6vw;
     }
   }
 
   @media screen and (max-width: 360px) {
     & h1 {
       // font-size: var(--size-600);
-      font-size: 7vw;
+      font-size: 5vw;
     }
   }
   
