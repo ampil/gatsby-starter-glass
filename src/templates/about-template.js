@@ -28,6 +28,12 @@ const AboutWrapper = styled.div`
   justify-content: space-around;
   height: 100%;
 
+  a {
+    color: #962020;
+    text-decoration: underline;
+    //text-decoration-thickness: 0.125rem;
+  }
+
   @media screen and (max-width: 1000px) {
     & {
       flex-direction: column;

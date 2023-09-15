@@ -21,7 +21,7 @@ module.exports = {
         url: "https://twitter.com",
       },*/
       {
-        name: "Вступайте в Республику",
+        name: "КИ.REPUBLIC",
         url: "http://ci-republic.tilda.ws/",
       },
     ],

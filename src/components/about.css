@@ -13,12 +13,12 @@ div.about-body {
     margin: 0;
     padding: 0;
 
-    min-height: 50vh;
+    /* min-height: 100vh; */
     background-color: inherit;
     display: flex;
     justify-content: center;
     align-items:center;
-    font-size: 16px;
+    font-size: var(--size-400);
     font-family: "Montserrat", sans-serif;
 }
 
@@ -49,7 +49,7 @@ div.card img {
 }
 
 div.about.h2 {
-    font-size: var(--size-700);
+    font-size: var(--size-600);
     text-align: center;
     font-family: 'Montserrat';
     font-weight: 700;
@@ -66,11 +66,12 @@ div.card h4 {
 }
   
 div.card p.role {
-  font-size: 80%;
+  /* font-size: 80%; */
   color: inherit;
   /* margin-bottom: 20px; */
   margin: 10px 0;
   text-align: center;
+  font-family: "Montserrat";
 }
 div.card a {
   background: var(--btn, #000);

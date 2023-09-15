@@ -39,7 +39,7 @@ const PostTemplate = ({ data }) => {
 
           {main && (
             <div>
-              <span><Link to="/"> Все тексты</Link></span>
+              <span><Link to="/">Все тексты</Link></span>
               {/* <Link to="/"> Все тексты<img class="displayed" src={zuHomeImg} alt="Домой" width={80}/></Link> */}
             </div>
           )}
@@ -230,7 +230,7 @@ export const pageQuery = graphql`
       }
     }
 
-    main: markdownRemark(fields: { slug: { eq: $prevSlug } }) {
+    main: markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
       }
