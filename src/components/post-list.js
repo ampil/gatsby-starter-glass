@@ -136,7 +136,7 @@ const PostListTitle = styled.h2`
       font-size:6vw;
     }
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 420px) {
     & {
       font-size:5vw;
     }

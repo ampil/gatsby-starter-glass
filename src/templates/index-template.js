@@ -53,7 +53,7 @@ const Intro = styled.div`
     }
   }
 
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: 420px) {
     & h1 {
       // font-size: var(--size-600);
       font-size: 7vw;
