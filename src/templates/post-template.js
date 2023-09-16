@@ -24,9 +24,13 @@ const PostTemplate = ({ data }) => {
         <article>
           <PostTitle>{frontmatter.title}</PostTitle>
 
-          <PostName>{frontmatter.name}</PostName>
-
           <PostContent dangerouslySetInnerHTML={{ __html: html }} />
+
+          <TagListProp>
+            <Tags tags={frontmatter.tags} />
+          </TagListProp>
+          {/* <PostName> <code class="language-text">{frontmatter.name}</code></PostName> */}
+          {/* <PostNames><code class="language-text">{frontmatter.name}</code></PostNames> */}
         </article>
 
         <PostPagination>
@@ -44,7 +48,6 @@ const PostTemplate = ({ data }) => {
             </div>
           )}
 
-
           {next && (
             <div>
               <span>Вперёд</span>
@@ -52,7 +55,7 @@ const PostTemplate = ({ data }) => {
             </div>
           )}
         </PostPagination>
-        <Tags tags={frontmatter.tags} />
+        {/* <Tags tags={frontmatter.tags} /> */}
       </PostWrapper>
     </Layout>
   );
@@ -100,11 +103,15 @@ const PostDate = styled.span`
   text-transform: uppercase;
 `;
 
+
 const PostName = styled.span`
-  font-size: var(--size-400);
-  display: block;
+  // font-size: var(--size-400);
+  // display: block;
   margin-top: 0.5rem;
-  text-transform: uppercase;
+  // text-transform: uppercase;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
 `;
 
 const PostContent = styled.section`
@@ -231,6 +238,20 @@ const PostPagination = styled.nav`
   }
 `;
 
+
+const TagListProp = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 2rem;
+  margin-top: var(--size-100);
+  // max-size: 200px;
+  overflow: wrap;
+  white-space: wrap;
+`;
+
+
 export const pageQuery = graphql`
   query PostBySlug($slug: String!, $prevSlug: String, $nextSlug: String) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
@@ -239,7 +260,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         tags
-        name
         date(formatString: "DD MMMM YYYY", locale: "ru")
         description
       }

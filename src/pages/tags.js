@@ -28,8 +28,8 @@ const Tags = ({ data }) => {
   const tags = data.allMarkdownRemark.group;
 
   return (
-    <Layout title="Все тэги">
-      <h1>Все тэги</h1>
+    <Layout title="Все авторы">
+      <h1>Все авторы</h1>
 
       <TagList>
         {tags.map((tag) => (

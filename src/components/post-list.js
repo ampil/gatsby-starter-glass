@@ -40,7 +40,7 @@ const PostListItem = ({
 }) => {
   return (
     <StyledPostListItem>
-      <Tags tags={tags} />
+      {/* <Tags tags={tags} /> */}
 
       <PostListTitle>
         <Link to={slug}>{title}</Link>
@@ -53,9 +53,12 @@ const PostListItem = ({
       <PostListMeta>
         <span>{timeToRead} мин.</span>
         
-        <span>{date}</span>
+        {/* <span>{date}</span> */}
+        {/* <span>{name}</span> */}
 
-        <span>{name}</span>
+      <TagListProp>
+        <Tags tags={tags} />
+      </TagListProp>
       </PostListMeta>
     </StyledPostListItem>
   );
@@ -163,4 +166,22 @@ const PostListMeta = styled.div`
   font-size: var(--size-300);
   display: flex;
   justify-content: space-between;
+  // display: block;
+  // max-width: 50%;
+  // flex: 0 0 calc(50% - 20px);
+  // max-width: calc(50% - 20px);
+  // overflow: hidden;
+  // white-space: nowrap;
+  // text-overflow: ellipsis;
+`;
+
+
+const TagListProp = styled.div`
+  // margin-top: 2rem;
+  max-width: 200px;
+  font-size: var(--size-300);
+  overflow: scroll;
+  display: flex;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 `;

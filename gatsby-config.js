@@ -32,6 +32,7 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     "gatsby-plugin-use-dark-mode",
+    'gatsby-plugin-postcss',
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -133,6 +134,7 @@ module.exports = {
                     }
                     frontmatter {
                       title
+                      name
                       date
                     }
                   }

@@ -175,7 +175,7 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
 
     type Author {
-      name: String
+      name: [String!]
       summary: String
     }
 
@@ -193,6 +193,7 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       date: Date @dateformat
       template: String
+      name: [String!]
       tags: [String!]
     }
 

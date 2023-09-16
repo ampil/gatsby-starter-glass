@@ -9,36 +9,39 @@ const TagsTemplate = ({ pageContext, data }) => {
   const { tag } = pageContext;
   const { totalCount } = data.allMarkdownRemark;
   const posts = data.allMarkdownRemark.nodes;
-  const title = `Постов с тэгом ${tag}`;
+  const title = `Текстов от автора ${tag}`;
 
   return (
     <Layout title={title}>
       <TagsTemplateWrapper>
         <Title>
-          {totalCount} постов с тэгом "{tag}"
+          {/* Текстов от автора "{tag}": {totalCount}  */}
+          Автор: {tag}
         </Title>
-        <Link
-          css={`
-            margin-top: var(--size-400);
-            display: inline-block;
-            color: inherit;
-            text-transform: uppercase;
-          `}
-          to="/tags"
-        >
-          посмотреть все тэги
-        </Link>
+
         <PostList posts={posts} />
 
-        <StyledLink
+        <Link
+          css={`
+            margin-top: var(--size-300);
+            display: inline-block;
+            color: inherit;
+            // text-transform: uppercase;
+          `}
+          to="/tags"
+        >
+          Посмотреть тексты других авторов
+        </Link>
+
+        {/* <StyledLink
           css={`
             margin-top: var(--size-400);
             display: inline-block;
           `}
           to="/tags"
         >
-          Посмотреть все тэги
-        </StyledLink>
+          Посмотреть посты всех авторов
+        </StyledLink> */}
       </TagsTemplateWrapper>
     </Layout>
   );
@@ -51,7 +54,18 @@ const TagsTemplateWrapper = styled.div`
 `;
 
 const Title = styled.h1`
-  font-size: var(--size-700);
+  @media screen and (max-width: 700px) {
+    & h1 {
+      font-size: 6vw;
+    }
+  }
+
+  @media screen and (max-width: 420px) {
+    & h1 {
+      font-size: 5vw;
+    }
+  }  
+  // font-size: var(--size-700);
 `;
 
 export const pageQuery = graphql`

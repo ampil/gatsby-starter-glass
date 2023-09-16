@@ -22,13 +22,15 @@ const toKebabCase = (str) => {
 // shows tags in a post, i.e. http://localhost:8000/tags/after
 const Tags = ({ tags }) => {
   return (
-    <div>
+    <div class="authors">
       {tags &&
         tags.map((tag) => {
           return (
+            // <code class="language-text">
             <Tag key={tag}>
               <Link to={`/tags/${toKebabCase(tag)}`}>{tag}</Link>
             </Tag>
+            // </code>
           );
         })}
     </div>
@@ -40,35 +42,43 @@ export default Tags;
 const Tag = styled.span`
   margin-right: 0.6rem;
   margin-bottom: 0.6rem;
-  text-transform: uppercase;
-  font-size: var(--size-300);
+  padding: 0.1em 0.3em;
+	border-radius: 0.3em;
+	white-space: normal;
+  // text-transform: uppercase;
+  // font-size: var(--size-300);
+  background-color: #4d79af;
+  color: #e3eaf2;
+  font-family: "Source Sans Pro", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+	text-align: left;
+	white-space: pre;
 
   & a {
     position: relative;
     z-index: 2;
     text-decoration: none;
     color: inherit;
-    padding: 0.2rem 0.6rem;
-    border: 1px solid rgba(255, 255, 255, 1);
-    border-radius: 4px;
+    // padding: 0.2rem 0.6rem;
+    // border: 1px solid rgba(255, 255, 255, 1);
+    // border-radius: 4px;
   }
 
   & a:hover {
-    background-color: rgba(255, 255, 255, 0.9);
+    // background-color: rgba(255, 255, 255, 0.9);
   }
 
   body.light-mode & a {
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.7);
+    // backdrop-filter: blur(10px);
+    // border: 1px solid rgba(255, 255, 255, 0.5);
+    // background-color: rgba(255, 255, 255, 0.7);
   }
 
   body.light-mode & a:hover {
-    background-color: rgba(255, 255, 255, 1);
+    // background-color: rgba(255, 255, 255, 1);
   }
 
   body.dark-mode & a {
-    background-color: #212122;
+    // background-color: #212122;
     border: 1px solid #1a1a1b;
     opacity: 0.8;
   }
