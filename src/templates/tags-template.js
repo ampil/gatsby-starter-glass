@@ -29,7 +29,7 @@ const TagsTemplate = ({ pageContext, data }) => {
             text-decoration: underline;
             // text-transform: uppercase;
           `}
-          // to="/tags"
+          to="/tags"
         >
           &gt;&gt; Посмотреть тексты других авторов
         </Link>

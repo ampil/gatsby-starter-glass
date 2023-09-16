@@ -147,7 +147,7 @@ const StyledNavList = styled.ul`
 `;
 
 const StyledNavListItem = styled.li`
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 701px) {
   margin-right: 2rem;
 }  
 
