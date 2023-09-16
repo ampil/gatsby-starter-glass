@@ -30,7 +30,7 @@ const Tags = ({ data }) => {
   return (
     <Layout title="Все авторы">
       <h1>Все авторы</h1>
-
+      <br></br>
       <TagList>
         {tags.map((tag) => (
           <TagItem key={tag.fieldValue}>

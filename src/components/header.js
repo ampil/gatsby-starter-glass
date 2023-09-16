@@ -126,22 +126,50 @@ const StyledNav = styled.nav`
 
 const StyledNavList = styled.ul`
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 0;
   list-style-type: none;
+
+  @media screen and (min-width: 700px) {
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0px;
+  }  
+
+  @media screen and (max-width: 700px) {
+    display: flex;
+    align-items: flex-end;
+    flex-flow: column;
+    justify-content: right;
+    padding-right: 14px;
+    max-width: 300px;
+    flex-direction: column;
+  }  
 `;
 
 const StyledNavListItem = styled.li`
-  &:not(:last-of-type) {
-    margin-right: 2rem;
+@media screen and (min-width: 700px) {
+  margin-right: 2rem;
+}  
+
+@media screen and (max-width: 700px) {
+  :last-of-type {
+     margin-top: 0.3rem;
+   }
+
+   & a {
+    font-size: 0.7rem;
   }
-  @media screen and (max-width: 700px) {
-    &:not(:last-of-type) {
-      margin-right: 1rem;
-    }
-  }
+}    
+
+// &:not(:last-of-type) {
+  //   margin-right: 2rem;
+  // }
+  // @media screen and (max-width: 700px) {
+  //   &:not(:last-of-type) {
+  //     margin-right: 1rem;
+  //   }
+  // }
+
   & a {
     color: inherit;
     //text-transform: uppercase;
@@ -149,9 +177,5 @@ const StyledNavListItem = styled.li`
     text-decoration: none;
     letter-spacing: 0.1rem;
   }
-  @media screen and (max-width: 700px) {
-    & a {
-      font-size: 0.7rem;
-    }
-  }
+
 `;

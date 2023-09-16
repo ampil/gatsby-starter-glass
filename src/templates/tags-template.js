@@ -26,11 +26,12 @@ const TagsTemplate = ({ pageContext, data }) => {
             margin-top: var(--size-300);
             display: inline-block;
             color: inherit;
+            text-decoration: underline;
             // text-transform: uppercase;
           `}
-          to="/tags"
+          // to="/tags"
         >
-          Посмотреть тексты других авторов
+          &gt;&gt; Посмотреть тексты других авторов
         </Link>
 
         {/* <StyledLink
