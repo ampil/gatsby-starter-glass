@@ -2,19 +2,28 @@ import React from "react";
 import Layout from "../components/layout";
 import { graphql } from "gatsby";
 import styled from "styled-components";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+// import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import ContactForm from "../components/ContactForm";
 
 const ContactTemplate = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark;
-  const profileImage = getImage(frontmatter.profile_image);
+  // const profileImage = getImage(frontmatter.profile_image);
 
   return (
     <Layout title={frontmatter.title}>
       <ContactWrapper>
-        <ContactImageWrapper image={profileImage} alt="" />
+        {/* <ContactImageWrapper image={profileImage} alt="" /> */}
 
         <ContactCopy dangerouslySetInnerHTML={{ __html: html }} />
       </ContactWrapper>
+      
+      <br></br><br></br>
+        {/* <p align="center">Форма обратной связи</p> */}
+        <p align="center">Напишите нам:</p>  
+        <br></br>
+        <div class = "cForm">
+        <ContactForm />
+        </div>
     </Layout>
   );
 };
@@ -40,12 +49,12 @@ const ContactWrapper = styled.div`
   }
 `;
 
-const ContactImageWrapper = styled(GatsbyImage)`
-  display: block;
-  border-radius: 50%;
-  height: 300px;
-  width: 300px;
-`;
+// const ContactImageWrapper = styled(GatsbyImage)`
+//   display: block;
+//   border-radius: 50%;
+//   height: 300px;
+//   width: 300px;
+// `;
 
 const ContactCopy = styled.div`
   max-width: 60ch;

@@ -3,7 +3,6 @@ import Layout from "../components/layout";
 import { graphql } from "gatsby";
 import styled from "styled-components";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import ContactForm from "../components/ContactForm";
 
 const AboutTemplate = ({ data }) => {
   const { html, frontmatter } = data.markdownRemark;
@@ -16,14 +15,6 @@ const AboutTemplate = ({ data }) => {
 
         <AboutCopy dangerouslySetInnerHTML={{ __html: html }} />
       </AboutWrapper>
-
-      <br></br><br></br>
-      <h2 align="center">Форма обратной связи</h2>
-      <br></br>
-      <p align="center">Напишите нам:</p>  
-      <div class = "cForm">
-      <ContactForm />
-      </div>
     </Layout>
   );
 };
