@@ -1,11 +1,10 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import {graphql} from 'gatsby';
 import Layout from '../components/layout';
 import PostList from '../components/post-list';
 import styled from 'styled-components';
-import StyledLink from '../components/styled-link';
 
-const HomePage = ({ data }) => {
+const HomePage = ({data}) => {
   const posts = data.allMarkdownRemark.nodes;
   const intro = data.markdownRemark.html;
   const title = data.markdownRemark.frontmatter.title;
@@ -38,7 +37,6 @@ const Intro = styled.div`
   text-align: left;
 
   & p {
-    // text-transform: capitalize;
     font-size: var(--size-400);
   }
 
@@ -48,14 +46,12 @@ const Intro = styled.div`
 
   @media screen and (max-width: 700px) {
     & h1 {
-      // font-size: var(--size-600);
       font-size: 8vw;
     }
   }
 
   @media screen and (max-width: 420px) {
     & h1 {
-      // font-size: var(--size-600);
       font-size: 7vw;
     }
   }

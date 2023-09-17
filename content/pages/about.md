@@ -7,27 +7,25 @@ template: about-template
 
 </br>
 
-Концепция, редактор  
+Концепция, редактор, автор подводок  
 <a href = "https://instagram.com/andriyashkin.alexandr" target="_blank" rel="noreferrer">Александр Андрияшкин</a>
-
 ___
 
+</br></br>
 Редактор  
 <a href = "https://instagram.com/cicfest" target="_blank" rel="noreferrer">Анна Богословская</a>
-
 ___
 
+</br></br>
 Иллюстрации  
 <a href="https://instagram.com/zubikistan" target="_blank" rel="noreferrer">Татьяна Зубарева</a>
-
 ___
 
+</br></br>
 Разработка сайта, вёрстка, веб-дизайн  
 <a href="https://t.me/ampil" target="_blank" rel="noreferrer">Андрей Ампилогов</a>
-
-
 ___
-<br>
+
 
 <!-- <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
   <p>

@@ -1,11 +1,11 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "gatsby";
+import React from 'react';
+import styled from 'styled-components';
+import {Link} from 'gatsby';
 
-const PostLink = ({ posts }) => {
-  const PostLink = posts.map(({ frontmatter, fields, excerpt, timeToRead }) => {
-    const { title, description, name } = frontmatter;
-    const { slug } = fields;
+const PostLink = ({posts}) => {
+  const PostLink = posts.map (({frontmatter, fields, excerpt, timeToRead}) => {
+    const {title, description, name} = frontmatter;
+    const {slug} = fields;
 
     return (
       <PostLinkItem
@@ -25,13 +25,7 @@ const PostLink = ({ posts }) => {
 
 export default PostLink;
 
-const PostLinkItem = ({
-  title,
-  excerpt,
-  name,
-  description,
-  slug,
-}) => {
+const PostLinkItem = ({title, excerpt, name, description, slug}) => {
   return (
     <StyledPostLinkItem>
 
@@ -104,13 +98,11 @@ const PostLinkTitle = styled.h2`
   line-height: 1.2;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  //text-transform: capitalize;
   font-size: var(--size-600);
   font-weight: 800;
 
   & a {
     text-decoration: none;
-    // color: inherit;
     color: #962020;
   }
 
@@ -130,7 +122,6 @@ const PostLinkExcerpt = styled.p`
 
   & a {
     text-decoration: none;
-    // color: inherit;
     color: #962020;
   }
 `;

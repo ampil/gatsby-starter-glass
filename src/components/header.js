@@ -162,13 +162,6 @@ const StyledNavListItem = styled.li`
 }    
 
 // &:not(:last-of-type) {
-  //   margin-right: 2rem;
-  // }
-  // @media screen and (max-width: 700px) {
-  //   &:not(:last-of-type) {
-  //     margin-right: 1rem;
-  //   }
-  // }
 
   & a {
     color: inherit;

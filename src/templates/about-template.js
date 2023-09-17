@@ -1,19 +1,19 @@
-import React from "react";
-import Layout from "../components/layout";
-import { graphql } from "gatsby";
-import styled from "styled-components";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import React from 'react';
+import Layout from '../components/layout';
+import {graphql} from 'gatsby';
+import styled from 'styled-components';
+import {GatsbyImage, getImage} from 'gatsby-plugin-image';
 
-const AboutTemplate = ({ data }) => {
-  const { html, frontmatter } = data.markdownRemark;
-  const profileImage = getImage(frontmatter.profile_image);
+const AboutTemplate = ({data}) => {
+  const {html, frontmatter} = data.markdownRemark;
+  const profileImage = getImage (frontmatter.profile_image);
 
   return (
     <Layout title={frontmatter.title}>
       <AboutWrapper>
         <AboutImageWrapper image={profileImage} alt="" />
 
-        <AboutCopy dangerouslySetInnerHTML={{ __html: html }} />
+        <AboutCopy dangerouslySetInnerHTML={{__html: html}} />
       </AboutWrapper>
     </Layout>
   );
@@ -47,14 +47,12 @@ const AboutWrapper = styled.div`
 
   @media screen and (max-width: 700px) {
     & h2 {
-      // font-size: var(--size-600);
       font-size: 8vw;
     }
   }
 
   @media screen and (max-width: 420px) {
     & h2 {
-      // font-size: var(--size-600);
       font-size: 7vw;
     }
   }
@@ -63,7 +61,7 @@ const AboutWrapper = styled.div`
 
 `;
 
-const AboutImageWrapper = styled(GatsbyImage)`
+const AboutImageWrapper = styled (GatsbyImage)`
   display: block;
   border-radius: 50%;
   height: 300px;
@@ -88,5 +86,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-

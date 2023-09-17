@@ -1,13 +1,12 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import {Link, graphql} from 'gatsby';
 import Layout from '../components/layout';
 import PostList from '../components/post-list';
-import StyledLink from '../components/styled-link';
 import styled from 'styled-components';
 
-const TagsTemplate = ({ pageContext, data }) => {
-  const { tag } = pageContext;
-  const { totalCount } = data.allMarkdownRemark;
+const TagsTemplate = ({pageContext, data}) => {
+  const {tag} = pageContext;
+  const {totalCount} = data.allMarkdownRemark;
   const posts = data.allMarkdownRemark.nodes;
   const title = `Текстов от автора ${tag}`;
 
@@ -27,22 +26,12 @@ const TagsTemplate = ({ pageContext, data }) => {
             display: inline-block;
             color: inherit;
             text-decoration: underline;
-            // text-transform: uppercase;
           `}
           to="/tags"
         >
           &gt;&gt; Посмотреть тексты других авторов
         </Link>
 
-        {/* <StyledLink
-          css={`
-            margin-top: var(--size-400);
-            display: inline-block;
-          `}
-          to="/tags"
-        >
-          Посмотреть посты всех авторов
-        </StyledLink> */}
       </TagsTemplateWrapper>
     </Layout>
   );
@@ -66,7 +55,6 @@ const Title = styled.h1`
       font-size: 5vw;
     }
   }  
-  // font-size: var(--size-700);
 `;
 
 export const pageQuery = graphql`

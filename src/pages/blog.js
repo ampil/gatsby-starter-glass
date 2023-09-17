@@ -1,11 +1,10 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import {graphql, Link} from 'gatsby';
 import Layout from '../components/layout';
-import PostList from '../components/post-list';
 import PostLink from '../components/post-link';
 import styled from 'styled-components';
 
-const Blog = ({ data }) => {
+const Blog = ({data}) => {
   const posts = data.allMarkdownRemark.nodes;
 
   return (
