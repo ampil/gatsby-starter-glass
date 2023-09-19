@@ -27,21 +27,24 @@ export default PostLink;
 
 const PostLinkItem = ({title, excerpt, name, description, slug}) => {
   return (
-    <StyledPostLinkItem>
+    // <div class="index-image">
+    (
+      <StyledPostLinkItem>
+        <PostLinkTitle>
+          <Link to={slug}>{title}</Link>
+        </PostLinkTitle>
+        <PostLinkExcerpt
+          dangerouslySetInnerHTML={{
+            __html: description || excerpt,
+          }}
+        />
+        <PostLinkMeta>
 
-      <PostLinkTitle>
-        <Link to={slug}>{title}</Link>
-      </PostLinkTitle>
-      <PostLinkExcerpt
-        dangerouslySetInnerHTML={{
-          __html: description || excerpt,
-        }}
-      />
-      <PostLinkMeta>
-
-        <span>{name}</span>
-      </PostLinkMeta>
-    </StyledPostLinkItem>
+          <span>{name}</span>
+        </PostLinkMeta>
+      </StyledPostLinkItem>
+    )
+    // </div>
   );
 };
 
@@ -53,7 +56,7 @@ const StyledPostLink = styled.ul`
   justify-items: center;
   grid-gap: var(--size-600);
   grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
-
+  
   @media screen and (max-width: 500px) {
     & {
       display: block;

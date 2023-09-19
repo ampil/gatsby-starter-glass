@@ -3,6 +3,7 @@ import {graphql} from 'gatsby';
 import Layout from '../components/layout';
 import PostList from '../components/post-list';
 import styled from 'styled-components';
+import bgImage from '../components/bg-image';
 
 const HomePage = ({data}) => {
   const posts = data.allMarkdownRemark.nodes;
@@ -10,16 +11,21 @@ const HomePage = ({data}) => {
   const title = data.markdownRemark.frontmatter.title;
 
   return (
-    <Layout title={title}>
-      <Intro
-        dangerouslySetInnerHTML={{
-          __html: intro,
-        }}
-      />
+    // <Layout title={title}>
+    (
+      <Layout title="">
+        <Intro
+          dangerouslySetInnerHTML={{
+            __html: intro,
+          }}
+        />
 
-      <PostList posts={posts} />
+        {/* <bgImage /> */}
 
-    </Layout>
+        <PostList posts={posts} />
+
+      </Layout>
+    )
   );
 };
 
@@ -35,6 +41,7 @@ const Intro = styled.div`
   margin-top: var(--size-800);
   margin-bottom: var(--size-900);
   text-align: center;
+  //background-image: url("/media/zu-talks-posleslovie.png");
 
   & p {
     font-size: var(--size-400);

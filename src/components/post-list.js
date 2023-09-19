@@ -41,7 +41,8 @@ const PostListItem = ({
   return (
     <StyledPostListItem>
       {/* <Tags tags={tags} /> */}
-
+      {/* <div class="index-image" /> */}
+      {/* <img src="/media/zu-talks-posleslovie.png"></img> */}
       <PostListTitle>
         <Link to={slug}>{title}</Link>
       </PostListTitle>
@@ -71,10 +72,12 @@ const StyledPostList = styled.ul`
   justify-items: center;
   grid-gap: var(--size-600);
   grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
+  background: url("/media/zu-talks-posleslovie.png") center center / 50% no-repeat fixed white;
 
   @media screen and (max-width: 500px) {
     & {
       display: block;
+      background: url("/media/zu-talks-posleslovie.png") center center / 80% no-repeat fixed white;
     }
   }
 `;
