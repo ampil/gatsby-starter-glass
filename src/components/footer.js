@@ -7,7 +7,9 @@ const Footer = () => {
   return (
     <StyledFooter>
       <FooterWrapper>
-        <SocialLinks />
+        <SocialLinksStyle>
+          <SocialLinks />
+        </SocialLinksStyle>
 
         <FooterAttribution>
           © 2023
@@ -25,8 +27,9 @@ const Footer = () => {
 export default Footer;
 
 const StyledFooter = styled.footer`
-  padding-top: var(--size-300);
+  padding-top: var(--size-700);
   padding-bottom: var(--size-300);
+  // margin-top: 6px;
 `;
 
 const FooterAttribution = styled.p`
@@ -37,9 +40,21 @@ const FooterAttribution = styled.p`
   }
 `;
 
-const FooterWrapper = styled(Container)`
+const FooterWrapper = styled (Container)`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+`;
+
+const SocialLinksStyle = styled.div`
+  //font-size: var(--size-300);
+
+  
+  & a {
+    text-decoration: underline;
+    font-size: var(--size-400);
+    // '+2';
+
+  }
 `;

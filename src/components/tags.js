@@ -105,7 +105,7 @@ export default Tags;
 const Tag = styled.span`
   margin-right: 0.6rem;
   margin-bottom: 0.6rem;
-  padding: 0.1em 0.3em;
+  padding: 0.2em 0.6em;
 	border-radius: 0.3em;
 	white-space: normal;
   // font-size: var(--size-300);

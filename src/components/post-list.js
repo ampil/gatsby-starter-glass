@@ -95,11 +95,21 @@ const StyledPostListItem = styled.li`
 
   body.light-mode &:hover {
     //background-color: rgba(255, 255, 15, 0.5);
+    background-color: #434343;
+  //#3b3b3c;
+    //#5F9EA0
+    color: white;
   }
 
   body.dark-mode & {
     background-color: #3b3b3c;
     border: 1px solid #515151;
+  }
+
+  body.dark-mode &:hover {
+    //background-color: rgba(255, 255, 15, 0.5);
+    background-color: #FFFFFE;
+    color: black;
   }
 
   @media screen and (max-width: 500px) {

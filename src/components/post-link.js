@@ -80,6 +80,7 @@ const StyledPostLinkItem = styled.li`
 
   body.light-mode &:hover {
     //background-color: rgba(255, 255, 15, 0.5);
+    //background-color: #5F9EA0
   }
 
   body.dark-mode & {

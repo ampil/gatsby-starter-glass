@@ -1,18 +1,18 @@
-import React from "react";
-import styled from "styled-components";
-import { Link } from "gatsby";
-import Container from "./container";
-import ThemeSwitch from "./theme-switch";
-import { useStaticQuery, graphql } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import zuHomeImg from "../images/zu-sborka.png";
+import React from 'react';
+import styled from 'styled-components';
+import {Link} from 'gatsby';
+import Container from './container';
+import ThemeSwitch from './theme-switch';
+import {useStaticQuery, graphql} from 'gatsby';
+import {GatsbyImage, getImage} from 'gatsby-plugin-image';
+import zuHomeImg from '../images/zu-praktikum.png';
 
 //const image = getImage(site.zuhome);
 
 const HEADER_NAV_ITEM = [
   {
-    label: "Все тексты",
-    url: "/",
+    label: 'Все тексты',
+    url: '/',
     isExternal: false,
   },
   // {
@@ -21,19 +21,19 @@ const HEADER_NAV_ITEM = [
   //   isExternal: false,
   // },
   {
-    label: "Команда",
-    url: "/about",
+    label: 'Команда',
+    url: '/about',
     isExternal: false,
   },
   {
-    label: "Напишите нам",
-    url: "/contact",
+    label: 'Напишите нам',
+    url: '/contact',
     isExternal: false,
   },
 ];
 
 const Header = () => {
-  const { site } = useStaticQuery(
+  const {site} = useStaticQuery (
     graphql`
       query {
         site {
@@ -49,11 +49,14 @@ const Header = () => {
     <StyledHeader>
       <HeaderWrapper>
         <HeaderTitle>
-          <Link to="/"> <img src={zuHomeImg} alt={site.siteMetadata.title} width={80} /></Link>
+          <Link to="/">
+            {' '}
+            <img src={zuHomeImg} alt={site.siteMetadata.title} width={80} />
+          </Link>
         </HeaderTitle>
 
         <HeaderNavList>
-          {HEADER_NAV_ITEM.map((item, index) => {
+          {HEADER_NAV_ITEM.map ((item, index) => {
             if (item.isExternal) {
               return (
                 <HeaderNavListItem key={index}>
@@ -81,7 +84,7 @@ const Header = () => {
 
 export default Header;
 
-const HeaderNavList = ({ children }) => {
+const HeaderNavList = ({children}) => {
   return (
     <StyledNav>
       <StyledNavList>{children}</StyledNavList>
@@ -89,7 +92,7 @@ const HeaderNavList = ({ children }) => {
   );
 };
 
-const HeaderNavListItem = ({ children }) => {
+const HeaderNavListItem = ({children}) => {
   return <StyledNavListItem>{children}</StyledNavListItem>;
 };
 
@@ -97,7 +100,7 @@ const StyledHeader = styled.header`
   padding-top: var(--size-300);
 `;
 
-const HeaderWrapper = styled(Container)`
+const HeaderWrapper = styled (Container)`
   display: flex;
   align-items: center;
   justify-content: space-between;

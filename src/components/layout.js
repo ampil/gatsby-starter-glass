@@ -1,12 +1,12 @@
-import React, { Fragment } from "react";
-import Seo from "./seo";
-import Header from "./header";
-import Footer from "./footer";
-import Container from "./container";
-import GlobalStyle from "./global-styles";
-import styled from "styled-components";
+import React, {Fragment} from 'react';
+import Seo from './seo';
+import Header from './header';
+import Footer from './footer';
+import Container from './container';
+import GlobalStyle from './global-styles';
+import styled from 'styled-components';
 
-const Layout = ({ children, title, description, socialImage = "" }) => {
+const Layout = ({children, title, description, socialImage = ''}) => {
   return (
     <Fragment>
       <GlobalStyle />
@@ -35,6 +35,6 @@ const LayoutWrapper = styled.div`
   }
 
   & footer {
-    margin-top: auto;
+    margin-top: 22px;
   }
 `;

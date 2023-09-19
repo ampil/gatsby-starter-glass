@@ -34,7 +34,7 @@ const Intro = styled.div`
   margin-left: auto;
   margin-top: var(--size-800);
   margin-bottom: var(--size-900);
-  text-align: left;
+  text-align: center;
 
   & p {
     font-size: var(--size-400);
