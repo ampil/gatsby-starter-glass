@@ -72,7 +72,7 @@ const StyledPostList = styled.ul`
   justify-items: center;
   grid-gap: var(--size-600);
   grid-template-columns: repeat(auto-fit, minmax(35ch, 1fr));
-  background: url("/media/zu-talks-posleslovie.png") center center / 50% no-repeat fixed white;
+  // background: url("/media/zu-talks-posleslovie.png") center center / 50% no-repeat fixed white;
 
   @media screen and (max-width: 500px) {
     & {
