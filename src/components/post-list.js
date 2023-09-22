@@ -77,7 +77,7 @@ const StyledPostList = styled.ul`
   @media screen and (max-width: 500px) {
     & {
       display: block;
-      background: url("/media/zu-talks-posleslovie.png") center center / 80% no-repeat fixed white;
+      // background: url("/media/zu-talks-posleslovie.png") center center / 80% no-repeat fixed white;
     }
   }
 `;
